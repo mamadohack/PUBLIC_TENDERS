@@ -8,3 +8,7 @@
   margin: 0;
   font-family: "Inter", sans-serif;
 }
+:root {
+  --primary : #094B72;
+  --primary-hover : #3a6f8e;
+}

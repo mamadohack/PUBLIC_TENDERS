@@ -1,17 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect } from 'react';
 import './App.css'
+import HomePage from './pages/HomePage'
+import "preline/preline";
+import { IStaticMethods } from "preline/preline";
+import { useLocation } from 'react-router-dom';
 
+declare global {
+  interface Window {
+    HSStaticMethods: IStaticMethods;
+  }
+}
 function App() {
-  const [count, setCount] = useState(0)
+  const location = useLocation();
 
+  useEffect(() => {
+    window.HSStaticMethods.autoInit();
+  }, [location.pathname]);
   return (
-    <>
-         
-      <p className="bg-red-500 text-white text-xl text-center p-5 font-bold">
-        Click on the Vite and React logos to learn more
-      </p>
+    <>    
+    <HomePage></HomePage>
     </>
   )
 }
