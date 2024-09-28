@@ -288,13 +288,13 @@ export function Avantages() {
 export function Abonnements() {
   return (
     <section className="bg-gray-200">
-      <div className="py-10 max-w-7xl mx-auto px-4 text-gray-900">
-        <h2 className="text-4xl font-semibold text-primary text-center mb-10">
+      <div className="py-10 max-w-7xl mx-auto px-4 text-gray-900 ">
+        <h2 className="text-4xl font-semibold text-gray-900 text-center mb-10">
           Nos abonnements
         </h2>
         <ul className="max-w-4xl mx-auto">
           <li className="bg-white rounded flex group drop-shadow-sm">
-            <div className="p-8">
+            <div className="p-8 flex-grow">
               <h2
                 className="max-w-max font-extrabold text-3xl pb-3 relative 
                 before:absolute before:w-[100%] before:duration-200 before:h-[3px] 
@@ -319,7 +319,22 @@ export function Abonnements() {
                 </li>
               </ul>
             </div>
-            <div className="p-8"></div>
+            <div className="p-8 price">
+              <div
+                className="pb-3 relative text-gray-600
+                before:absolute before:w-[100%] before:duration-200 before:h-[3px] 
+              before:bottom-0 before:left-0 before:bg-gray-200 before:content-['']
+              after:delay-300
+              after:absolute after:w-[0%] group-hover:after:w-[100%] after:duration-200 after:h-[3px] 
+              after:bottom-0 after:left-0 after:bg-primary after:content-['']"
+              >
+                <span className=" text-4xl font-meduim text-gray-900">600</span>
+                <span className="text-xs ms-1">DA/Mois</span>
+              </div>
+              <button className="px-5 py-3 font-medium border-2 rounded-md mt-5 border-primary duration-200 text-primary hover:bg-primary hover:text-white  ">
+                Apprendre encore plus
+              </button>
+            </div>
           </li>
         </ul>
       </div>
