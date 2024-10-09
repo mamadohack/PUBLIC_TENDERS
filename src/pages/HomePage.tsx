@@ -94,7 +94,7 @@ export function NavBar() {
           </div>
 
           <div className="flex items-center gap-x-1 lg:gap-x-2 ms-auto py-1 lg:ps-6 lg:order-3 lg:col-span-3 ">
-            <Link to={"/login"}>
+            <Link to={"/sign-up"}>
               <button
                 type="button"
                 className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-md bg-white text-gray-900 hover:text-gray-600 focus:text-gray-600 focus:outline-none  disabled:opacity-50 disabled:pointer-events-none "
@@ -102,7 +102,7 @@ export function NavBar() {
                 S'abonner
               </button>
             </Link>
-            <Link to={"/login"}>
+            <Link to={"/sign-in"}>
               <button
                 type="button"
                 className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-md border border-transparent bg-primary text-white hover:bg-primaryhover focus:outline-none focus:bg-primaryhover transition disabled:opacity-50 disabled:pointer-events-none"
