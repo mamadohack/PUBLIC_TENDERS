@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Form, Link } from "react-router-dom";
 import { IoEye } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 function Login() {
   return (
     <main className="min-h-svh bg-gray-300 flex items-center justify-center px-5">
-      <div className="p-3 bg-white flex rounded-lg drop-shadow-xl items-center gap-10 max-w-6xl">
+      <motion.div
+        className="p-3 bg-white flex rounded-lg drop-shadow-xl items-center gap-10 max-w-6xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
         <div className="max-w-screen-md flex-grow md:w-1/2 p-5 px-7">
           <Form>
             <div className="mb-5">
@@ -45,7 +52,7 @@ function Login() {
             <h2 className="font-semibold text-xl md:text-3xl text-gray-900 mb-1 md:mb-3">
               Content de te revoir
             </h2>
-            <p className="text-gray-500 md:mb-5 mb-3 text-sm md:text-base">
+            <p className="text-gray-500 md:mb-5 mb-3 text-sm ">
               Hé, bienvenue dans ton endroit spécial.
             </p>
 
@@ -180,7 +187,7 @@ function Login() {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }
@@ -190,13 +197,19 @@ export function SignUP() {
   console.log("rendered");
   return (
     <main className="min-h-svh bg-gray-300 flex items-center justify-center px-5">
-      <div className="p-3 bg-white flex rounded-lg drop-shadow-xl items-center gap-10 max-w-6xl w-full">
+      <motion.div
+        className="p-3 bg-white flex rounded-lg drop-shadow-xl items-center gap-10 max-w-6xl w-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
         <div className="hidden md:block md:w-1/2 ">
           <div className="relative rounded-lg ">
             <img
               src="/assets/login.png"
               alt=""
-              className="h-[500px] object-cover w-full  rounded-lg"
+              className="h-[500px] object-cover w-full rounded-lg"
             />
             <svg
               className="w-7 h-auto inline-block absolute top-2 right-2"
@@ -286,9 +299,16 @@ export function SignUP() {
 
               <div className="relative">
                 <input
+                  type="tel"
+                  className="peer duration-200 py-3 px-4 block w-full bg-gray-100 border-2 border-gray-100 rounded-lg text-sm  focus:border-primary disabled:opacity-50 disabled:pointer-events-none outline-none"
+                  placeholder="Numéro de téléphone"
+                />
+              </div>
+              <div className="relative">
+                <input
                   type="email"
                   className="peer duration-200 py-3 px-4 block w-full bg-gray-100 border-2 border-gray-100 rounded-lg text-sm  focus:border-primary disabled:opacity-50 disabled:pointer-events-none outline-none"
-                  placeholder="Email"
+                  placeholder="Email (facultatif)"
                 />
               </div>
 
@@ -313,10 +333,10 @@ export function SignUP() {
               </div>
             </div>
             <div className="mb-5">
-              <div className="">
+              <div className="flex items-center">
                 <input
                   type="checkbox"
-                  className="shrink-0 mt-0.5 border-gray-200 rounded text-primary focus:ring-primary disabled:opacity-50 disabled:pointer-events-none accent-primary w-3.5"
+                  className="shrink-0 border-gray-200 rounded text-primary focus:ring-primary disabled:opacity-50 disabled:pointer-events-none accent-primary w-3.5"
                   id="hs-default-checkbox"
                 />
                 <label
@@ -325,7 +345,7 @@ export function SignUP() {
                 >
                   j'accepte les
                 </label>
-                <Link to={"/login"} className="text-primary">
+                <Link to={"/login"} className=" ms-1 text-primary text-sm">
                   termes et conditions
                 </Link>
               </div>
@@ -340,7 +360,7 @@ export function SignUP() {
             </Link>
           </Form>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }
