@@ -196,7 +196,7 @@ export function SignUP() {
             <img
               src="/assets/login.png"
               alt=""
-              className="h-[500px] object-cover w-full  rounded-lg"
+              className="h-[500px] object-cover w-full rounded-lg"
             />
             <svg
               className="w-7 h-auto inline-block absolute top-2 right-2"
@@ -325,8 +325,8 @@ export function SignUP() {
                 >
                   j'accepte les
                 </label>
-                <Link to={"/login"} className="text-primary">
-                  termes et conditions
+                <Link to={"/login"} className=" ms-1 text-primary">
+                   termes et conditions
                 </Link>
               </div>
             </div>
